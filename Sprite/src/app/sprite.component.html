@@ -1,0 +1,5 @@
+<div  class='SpriteXX' [style.width.px]="getWidth()" [style.height.px]="getHeight()" (click)="this.clickSprite()">
+  
+  <img [src]="getURL()" [style.top.px]="getOffsetY()" [style.left.px]="getOffsetX()" (load)="this.setWidthAndHeight($event)">
+  
+</div>

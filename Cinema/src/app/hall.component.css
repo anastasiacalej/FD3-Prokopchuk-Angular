@@ -1,0 +1,12 @@
+.Hall{
+    border: 2px solid green;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: rgb(225, 241, 172);
+    text-align: center;
+    width: 100px;
+}
+
+.Hall h3{
+    text-align: center;
+}

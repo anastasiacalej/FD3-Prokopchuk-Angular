@@ -1,0 +1,9 @@
+div.SpriteXX{
+   display: inline-block;
+   overflow: hidden; 
+   position: relative;
+}
+
+div.SpriteXX img{
+   position: absolute;
+}

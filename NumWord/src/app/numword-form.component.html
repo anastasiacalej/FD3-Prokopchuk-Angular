@@ -1,0 +1,7 @@
+<div>
+   Введите число: <input #num type="text" (input)="false">
+  
+  <span  [ngClass]="{ Hidden:(num.value==''), Appear:(num.value!='') }">
+    У вас {{num.value|numword:'яблоко':'яблока':'яблок'}}
+  </span>
+</div>

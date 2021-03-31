@@ -1,0 +1,10 @@
+<div  class='Hall' >
+     <h3>ЗАЛ</h3>
+     <p>Всего: {{getAllTickets().length}}</p>
+     <p>Занято: {{getSoldTickets().length}}</p>
+     <p>Свободно: {{getInstockTickets().length}}</p>
+     <div [ngClass]="{ PlaceFree:(item), PlaceDisable:(!item) }" 
+          *ngFor="let item of getViewTickets(); let i = index">
+          {{i+1}}
+     </div>
+</div>

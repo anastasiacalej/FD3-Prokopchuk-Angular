@@ -1,0 +1,21 @@
+.Cash{
+    border: 3px solid rgb(19, 158, 204);
+    background-color:rgb(185, 232, 236);
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.Cash input[type=button]{
+    margin-left: 20px;
+}
+
+.Cash h3{
+    text-align: center;
+}
+
+.CashName{
+    color: green;
+    font-weight: bold;
+}

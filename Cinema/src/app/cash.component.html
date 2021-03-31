@@ -1,0 +1,16 @@
+<div  class='Cash' >
+
+    <h3>Касса <span class='CashName'>{{getCash()}}</span></h3>
+    <div>
+      
+            <input type="number" #count (input)="false" min="1" max="15">
+            <input type="button" (click)="getTickets()" value="получить">
+        
+        <p >
+           <span > Ваши билеты: </span> 
+        
+           <span class="Ticket" >{{getTicketsForPerson()}}</span>
+        </p>
+    </div>
+
+</div>
