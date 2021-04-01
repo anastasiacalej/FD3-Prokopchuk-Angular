@@ -6,24 +6,23 @@ import {Observable} from 'rxjs';
 @Injectable()
 export class TicketsDatasource {
 
-  private allTickets:Array<number>=[
-    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
-  ];
+  private allTickets:Array<number>;
 
-  private soldTickets:Array<number>=[
-    
-  ];
+  private soldTickets:Array<number>=[];
 
-  private instockTickets:Array<number>=[
-    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
-  ];
+  private instockTickets:Array<number>;
 
   private events$:Observable<Array<boolean>>;
 
-  constructor() {
+  constructor(){
+    this.allTickets=[];
+    for(let i:number=0;i<20;i++){
+      this.allTickets.push(i+1);
+    }
+    this.instockTickets=[...this.allTickets];
     this.events$=new Observable<Array<boolean>>();
   }
-
+  
   getPlacesObservable():Observable<Array<boolean>> {
     return this.events$;
   }

@@ -3,17 +3,19 @@
 @Injectable()
 export class TicketsDatasource {
 
-  private allTickets:Array<number>=[
-    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
-  ];
+  private allTickets:Array<number>;
 
-  private soldTickets:Array<number>=[
-    
-  ];
+  private soldTickets:Array<number>=[];
 
-  private instockTickets:Array<number>=[
-    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
-  ];
+  private instockTickets:Array<number>;
+
+  constructor(){
+    this.allTickets=[];
+    for(let i:number=0;i<20;i++){
+      this.allTickets.push(i+1);
+    }
+    this.instockTickets=[...this.allTickets];
+  }
 
 
   getAllTickets():Array<number> {
