@@ -18,15 +18,14 @@ export class Hall {
   @Input("instockTickets")
   private instockTickets:Array<number>;
 
-  private viewTickets:Array<boolean>=[
-    true,true,true,true,true,
-    true,true,true,true,true,
-    true,true,true,true,true,
-    true,true,true,true,true
-  ];
+  private viewTickets:Array<boolean>;
  
   constructor(private events:TicketsDatasource) {
-   
+    this.viewTickets=[];
+    let countPlace:number=events.getAllTickets().length;
+    for(let i:number=0;i<countPlace;i++){
+      this.viewTickets[i]=true;
+    }
   }
  
   getViewTickets():Array<boolean>{
