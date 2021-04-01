@@ -11,12 +11,14 @@ export class TicketsDatasource {
 
   constructor(){
     this.allTickets=[];
-    for(let i:number=0;i<20;i++){
-      this.allTickets.push(i+1);
+    let place:number=1;
+    let countPlace:number=20;
+    for(let i:number=0;i<countPlace;i++){
+      this.allTickets[i]=place;
+      place++;
     }
     this.instockTickets=[...this.allTickets];
   }
-
 
   getAllTickets():Array<number> {
     return this.allTickets;
